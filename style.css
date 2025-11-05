@@ -1,0 +1,83 @@
+body {
+  font-family: 'Kantumruy Pro', sans-serif;
+  margin: 0;
+  background: #faf7f7;
+  color: #333;
+  overflow: hidden;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+.invite-box {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease;
+}
+
+#openInvite {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #f5b7b1;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#openInvite:hover {
+  background: #e5989b;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #fff0f5, #fff);
+}
+
+.gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #fff0f5;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
